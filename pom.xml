@@ -63,6 +63,7 @@
 
     <modules>
         <module>vann-concurrent</module>
+        <module>vann-event</module>
     </modules>
 
 </project>
