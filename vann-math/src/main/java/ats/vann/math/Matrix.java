@@ -7,10 +7,6 @@ public class Matrix implements ReadWriteMatrix {
 		this.data = data;
 	}
 
-	protected Matrix(int rowCount, int columnCount) {
-		this(new double[rowCount][columnCount]);
-	}
-
 	@Override
 	public int getRowCount() {
 		return data.length;
