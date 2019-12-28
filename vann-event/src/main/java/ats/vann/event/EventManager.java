@@ -23,7 +23,6 @@ public class EventManager implements AutoCloseable {
 	private final Semaphore arbitrator;
 	private final AtomicBoolean keepDispatchingEvents;
 	private final AtomicBoolean keepRunningDispatcher;
-	private final EventDispatcher eventDispatcher;
 	private final EventListenerAdapterFactory eventListenerAdapterFactory;
 	private final Object lock;
 
@@ -36,7 +35,7 @@ public class EventManager implements AutoCloseable {
 		keepRunningDispatcher = new AtomicBoolean(true);
 		arbitrator = new Semaphore(0);
 		lock = new Object();
-		eventDispatcher = new EventDispatcher(dispatchedEventListenerAdapters, pendingEvents, keepRunningDispatcher, arbitrator);
+		EventDispatcher eventDispatcher = new EventDispatcher(dispatchedEventListenerAdapters, pendingEvents, keepRunningDispatcher, arbitrator);
 		taskService.runTask(eventDispatcher);
 	}
 
