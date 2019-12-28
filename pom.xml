@@ -64,6 +64,7 @@
     <modules>
         <module>vann-concurrent</module>
         <module>vann-event</module>
+        <module>vann-math</module>
     </modules>
 
 </project>
