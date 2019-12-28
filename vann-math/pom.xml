@@ -13,4 +13,14 @@
     <artifactId>vann-math</artifactId>
     <version>${revision}</version>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>ats-vann</groupId>
+            <artifactId>vann-event</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+    </dependencies>
+
 </project>
